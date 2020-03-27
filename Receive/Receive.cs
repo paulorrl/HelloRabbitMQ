@@ -14,14 +14,14 @@ namespace Receive
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare
-                    (
-                        queue: "hello",
-                        durable: false,
-                        exclusive: false,
-                        autoDelete: false,
-                        arguments: null
-                    );
+                //channel.QueueDeclare
+                //    (
+                //        queue: "hello",
+                //        durable: false,
+                //        exclusive: false,
+                //        autoDelete: false,
+                //        arguments: null
+                //    );
 
                 var consumer = new EventingBasicConsumer(channel);
 
